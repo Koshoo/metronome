@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Metronome</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="metronome">
+        <div class="bpm-slider">
+          <p class="title">Online Metronome</p>
+          <h2 class="bpm-value">120 BPM</h2>
+          <input
+            class="bpm-slider-value"
+            type="range"
+            min="60"
+            max="240"
+            value="120"
+          />
+          <select class="beats-per-measure">
+            <option value="3">3 Beats Per Measure</option>
+            <option value="4" selected>4 Beats Per Measure</option>
+            <option value="5">5 Beats Per Measure</option>
+            <option value="6">6 Beats Per Measure</option>
+            <option value="7">7 Beats Per Measure</option>
+          </select>
+        </div>
+        <div class="sounds-radio">
+          <input
+            type="radio"
+            name="sound"
+            id="regular"
+            class="sounds"
+            value="regular"
+            checked
+          />
+          <label for="regular">Click</label>
+          <input
+            type="radio"
+            name="sound"
+            id="clave"
+            class="sounds"
+            value="clave"
+          />
+          <label for="clave">Clave</label>
+          <input
+            type="radio"
+            name="sound"
+            id="metro"
+            class="sounds"
+            value="metro"
+          />
+          <label for="metro">Metro</label>
+        </div>
+        <button class="start-stop">Start</button>
+        <button class="tap-tempo">Tap</button>
+        <div class="notification hidden">
+          <h4>Please stop the Metronome before using Tap Tempo</h4>
+        </div>
+        <script src="index.js"></script>
+      </div>
+    </div>
+  </body>
+</html>
